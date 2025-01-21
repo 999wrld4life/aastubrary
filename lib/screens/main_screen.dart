@@ -4,6 +4,7 @@ import 'package:day_1/screens/favorites_screen.dart';
 import 'package:day_1/screens/home_screen.dart';
 import 'package:day_1/screens/onboarding_screen.dart';
 import 'package:day_1/screens/search_screen.dart';
+import 'package:day_1/screens/seemore_screen.dart';
 import 'package:day_1/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -34,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
         color: Colors.white,
       ),
       const Icon(
-        FontAwesomeIcons.gear,
+        FontAwesomeIcons.bookOpen,
         color: Colors.white,
       ),
     ];
@@ -42,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
       const HomeScreen(),
       const SearchScreen(),
       const FavoritesScreen(),
-      const SettingsScreen(),
+      const SeemoreScreen(),
     ];
     return Scaffold(
       body: pages[index],
