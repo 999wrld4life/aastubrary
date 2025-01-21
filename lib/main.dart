@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
               displayColor: kBlackColor,
             ),
       ),
-      home: const SeemoreScreen(),
+      home: const SplashScreen(),
     );
   }
 }
@@ -80,7 +80,7 @@ class WelcomeScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HomeScreen();
+                        return const SeemoreScreen();
                       },
                     ),
                   );
