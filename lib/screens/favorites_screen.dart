@@ -43,42 +43,36 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         child: Column(
           children: [
             const SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                RiveAnimatedIcon(
-                  riveIcon: RiveIcon.arrowUp,
-                  loopAnimation: true,
-                  height: 50,
-                  width: 50,
-                  onTap: () {
-                    Navigator.of(context).pop();
-                  },
-                ),
-                const Text(
-                  'Favorites',
-                  style: TextStyle(fontSize: 30),
-                ),
-                GestureDetector(
-                  onTap: () async {
-                    await _controller.showTooltip();
-                  },
-                  child: SuperTooltip(
-                    controller: _controller,
-                    showBarrier: true,
-                    showDropBoxFilter: true,
-                    sigmaX: 10,
-                    sigmaY: 10,
-                    constraints: const BoxConstraints(maxHeight: 100),
-                    hasShadow: true,
-                    hideTooltipOnTap: true,
-                    hideTooltipOnBarrierTap: true,
-                    content: const Text(
-                        'Drag to reorder your favorite books as you like!'),
-                    child: const Icon(Icons.info_outline),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Favorites',
+                    style: TextStyle(fontSize: 30),
                   ),
-                )
-              ],
+                  GestureDetector(
+                    onTap: () async {
+                      await _controller.showTooltip();
+                    },
+                    child: SuperTooltip(
+                      controller: _controller,
+                      showBarrier: true,
+                      showDropBoxFilter: true,
+                      sigmaX: 10,
+                      sigmaY: 10,
+                      constraints: const BoxConstraints(maxHeight: 100),
+                      hasShadow: true,
+                      hideTooltipOnTap: true,
+                      hideTooltipOnBarrierTap: true,
+                      content: const Text(
+                          'Drag to reorder your favorite books as you like!'),
+                      child: const Icon(Icons.info_outline),
+                    ),
+                  )
+                ],
+              ),
             ),
             const SizedBox(height: 30),
             Expanded(
