@@ -84,6 +84,54 @@ class BooksList {
             "Born a Crime by Trevor Noah is a poignant and hilarious memoir about his upbringing in apartheid South Africa. Through vivid stories, he shares his experiences navigating identity, family, and systemic oppression, offering both humor and insight into resilience and hope.",
         rating: 4.8),
     Book(
+        title: 'Core Python Programming',
+        imagePath:
+            'assets/images/programming books/518csN6TPsL._SX378_BO1204203200_1.jpg',
+        pdfPath:
+            'assets/pdfs/Daniel_Zingaro_Learn_to_Code_by_Solving_Problems_A_Python_Programming.pdf',
+        author: 'Dr.R.Nageswara Rao',
+        description:
+            "Am I Small? is a heartwarming children’s book written by Nina Crews. The story follows a little girl who questions her size, exploring how perspectives change as she learns about the world around her. It’s a gentle, insightful read that helps children understand self-acceptance and the nature of growth.",
+        rating: 4.8),
+    Book(
+        title: 'The Rust Programming Language',
+        imagePath: 'assets/images/programming books/9781718500440.jpg',
+        pdfPath:
+            'assets/pdfs/Daniel_Zingaro_Learn_to_Code_by_Solving_Problems_A_Python_Programming.pdf',
+        author: 'Steve Klabnik and Carol Nichols',
+        description:
+            "Am I Small? is a heartwarming children’s book written by Nina Crews. The story follows a little girl who questions her size, exploring how perspectives change as she learns about the world around her. It’s a gentle, insightful read that helps children understand self-acceptance and the nature of growth.",
+        rating: 4.8),
+    Book(
+        title: 'Arduino Cookbook',
+        imagePath: 'assets/images/programming books/arduino-cookbook.jpg',
+        pdfPath:
+            'assets/pdfs/Daniel_Zingaro_Learn_to_Code_by_Solving_Problems_A_Python_Programming.pdf',
+        author: 'Michael Margolis',
+        description:
+            "Am I Small? is a heartwarming children’s book written by Nina Crews. The story follows a little girl who questions her size, exploring how perspectives change as she learns about the world around her. It’s a gentle, insightful read that helps children understand self-acceptance and the nature of growth.",
+        rating: 4.8),
+    Book(
+        title: 'Expert C programming: Deep C Secrets',
+        imagePath:
+            'assets/images/programming books/expert-c-programming-deep-c-secrets.jpg',
+        pdfPath:
+            'assets/pdfs/Daniel_Zingaro_Learn_to_Code_by_Solving_Problems_A_Python_Programming.pdf',
+        author: 'Peter Van Der Linden',
+        description:
+            "Am I Small? is a heartwarming children’s book written by Nina Crews. The story follows a little girl who questions her size, exploring how perspectives change as she learns about the world around her. It’s a gentle, insightful read that helps children understand self-acceptance and the nature of growth.",
+        rating: 4.8),
+    Book(
+        title: 'Unix in a Nutshell',
+        imagePath:
+            'assets/images/programming books/unix-in-nutshell-205x300.png',
+        pdfPath:
+            'assets/pdfs/Daniel_Zingaro_Learn_to_Code_by_Solving_Problems_A_Python_Programming.pdf',
+        author: 'Arnold Robbins',
+        description:
+            "Am I Small? is a heartwarming children’s book written by Nina Crews. The story follows a little girl who questions her size, exploring how perspectives change as she learns about the world around her. It’s a gentle, insightful read that helps children understand self-acceptance and the nature of growth.",
+        rating: 4.8),
+    Book(
         title: 'Yesinibit Kelemat',
         imagePath: 'assets/images/amharic-books/n2.jpg',
         pdfPath:
