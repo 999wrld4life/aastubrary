@@ -33,6 +33,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     return Scaffold(
       body: Container(
         width: double.infinity,
+        height: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/bg.png"),
@@ -203,14 +204,6 @@ class _FavoritesComponentState extends State<FavoritesComponent> {
                           .add(RemoveFromFavorite(widget.book));
                     },
                   ).show();
-                } else if (value == "Details") {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) {
-                      return DetailsScreen(
-                        book: widget.book,
-                      );
-                    },
-                  ));
                 }
               },
               itemBuilder: (context) => [
@@ -224,16 +217,6 @@ class _FavoritesComponentState extends State<FavoritesComponent> {
                     ],
                   ),
                 ),
-                const PopupMenuItem(
-                  value: "Details",
-                  child: Row(
-                    children: [
-                      Icon(Icons.info_outline),
-                      SizedBox(width: 5),
-                      Text('Details')
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
@@ -242,6 +225,7 @@ class _FavoritesComponentState extends State<FavoritesComponent> {
               Image.asset(
                 widget.book.imagePath,
                 height: 150,
+                width: 150,
               ),
               Expanded(
                 child: Column(
@@ -250,11 +234,12 @@ class _FavoritesComponentState extends State<FavoritesComponent> {
                   children: [
                     Text(
                       widget.book.title,
-                      style: const TextStyle(fontSize: 25),
+                      style: const TextStyle(fontSize: 20),
                     ),
                     Text(
                       widget.book.author,
-                      style: const TextStyle(fontSize: 18),
+                      style: const TextStyle(
+                          fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 15),
                     Row(
@@ -263,18 +248,13 @@ class _FavoritesComponentState extends State<FavoritesComponent> {
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) {
-                                return PdfviewerScreen(
-                                    pdfPath: widget.book.pdfPath);
+                                return DetailsScreen(book: widget.book);
                               },
                             ));
                           },
-                          child: const Text('Read'),
+                          child: const Text('Details'),
                         ),
                         const SizedBox(width: 20),
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: const Text('Remove'),
-                        ),
                       ],
                     ),
                   ],
