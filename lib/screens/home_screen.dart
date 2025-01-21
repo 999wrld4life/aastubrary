@@ -5,6 +5,7 @@ import 'package:day_1/consttants.dart';
 import 'package:day_1/model/book.dart';
 import 'package:day_1/screens/details_screen.dart';
 import 'package:day_1/screens/pdfviewer_screen.dart';
+import 'package:day_1/screens/seemore_screen.dart';
 import 'package:day_1/service/books_list.dart';
 import 'package:day_1/widgets/book_rating.dart';
 import 'package:day_1/widgets/reading_card_list.dart';
@@ -193,7 +194,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                       TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(context,
+                                              MaterialPageRoute(
+                                            builder: (context) {
+                                              return const SeemoreScreen();
+                                            },
+                                          ));
+                                        },
                                         child: const Text(
                                           'See More >',
                                           style: TextStyle(fontSize: 12),
@@ -249,7 +257,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                       TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(context,
+                                              MaterialPageRoute(
+                                            builder: (context) {
+                                              return const SeemoreScreen();
+                                            },
+                                          ));
+                                        },
                                         child: const Text(
                                           'See More >',
                                           style: TextStyle(fontSize: 12),
@@ -406,7 +421,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                       TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(context,
+                                              MaterialPageRoute(
+                                            builder: (context) {
+                                              return const SeemoreScreen();
+                                            },
+                                          ));
+                                        },
                                         child: const Text(
                                           'See More >',
                                           style: TextStyle(fontSize: 12),
@@ -458,7 +480,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                         ),
                                         TextButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.push(context,
+                                                MaterialPageRoute(
+                                              builder: (context) {
+                                                return const SeemoreScreen();
+                                              },
+                                            ));
+                                          },
                                           child: const Text(
                                             'See More >',
                                             style: TextStyle(fontSize: 12),
@@ -557,15 +586,44 @@ class _HomeScreenState extends State<HomeScreen> {
                     "Gary Venchuk",
                     style: TextStyle(color: kLightBlackColor),
                   ),
-                  const Row(
+                  Row(
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(right: 10.0),
-                        child: BookRating(
-                          rating: 4.9,
+                        padding: const EdgeInsets.only(right: 10.0),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 8, horizontal: 6),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                offset: const Offset(3, 7),
+                                blurRadius: 20,
+                                color: const Color(0xFD3D3D3).withOpacity(.5),
+                              ),
+                            ],
+                          ),
+                          child: const Column(
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: kIconColor,
+                                size: 15,
+                              ),
+                              SizedBox(height: 5),
+                              Text(
+                                '4.9',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      Expanded(
+                      const Expanded(
                         child: Text(
                           "When the earth was flat and everyone wanted to win the game of the best and people….",
                           maxLines: 3,
