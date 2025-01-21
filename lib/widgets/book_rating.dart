@@ -35,8 +35,7 @@ class BookRating extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           Text(
-            book?.rating.toString() ??
-                "N/A", // Default to "N/A" if book is null
+            book?.rating.toString() ?? "N/A",
             style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.bold,
